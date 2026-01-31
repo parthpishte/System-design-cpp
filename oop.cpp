@@ -102,7 +102,8 @@ class method_overrriding
 { // method_overrriding *p;
   // derived d;
   // p=&d;
-  //(*p).show();
+  //(*p).show(); 
+  //aslo can use override keyword
 public:
     virtual void show()
     {
@@ -112,7 +113,7 @@ public:
 class derived : public method_overrriding
 {
 public:
-    void show()
+    void show() override
     {
         cout << "hello from derived";
     }
@@ -146,6 +147,24 @@ public:
     }
 };
 
+class Shape {
+public:
+    virtual void draw() = 0;  // Pure virtual function (makes the class abstract)
+};
+
+class Circle : public Shape {
+public:
+    void draw() override {  // Implementing the abstract method
+        cout << "Drawing a Circle" << endl;
+    }
+};
+class Destrcuotr_example{
+    public:
+    ~Destrcuotr_example(){
+        cout<<"hello";
+    }
+}
+;
 int main()
 {
     default_class A1;
@@ -156,6 +175,11 @@ int main()
     method_overloading A5;
     child_class A6;
     multiple_inheritance_C A7;
+    Circle A8;
+    derived A9;
+    
+    
+
 
     return 0;
 }
@@ -165,3 +189,11 @@ int main()
 //1.public->accessible anywhere
 //2.protected->same class and child class
 //3.private ->same class only
+
+
+//obj  of abstract class cannot be created
+
+//friend function in C++ that allows us to access private and protected member functions from outside the class
+//child class constr():base class construci(){
+//
+//}
