@@ -77,10 +77,51 @@ class child_class: public Parent_class{    // to inheeit a claas use    child cl
         //cout<<a<<;
         public:
         child_class(){
-                 cout<<a;
+                 cout<<Parent_class::a;
                  Parent_class::display();
         }
 };
+class method_overrriding{                               //method_overrriding *p;
+                                                        //derived d;
+                                                        //p=&d;
+                                                        //(*p).show();
+        public:
+         virtual void show(){
+            cout<<"hello from child class";
+        }
+};
+class derived:public method_overrriding{
+    public:
+    void show(){
+        cout<<"hello from derived";
+        
+    }
+};
+class multiple_inheritance_A{
+
+    public:
+    int a;
+    void show(){
+        cout<<"greetings";
+    };
+};
+class multiple_inheritance_B{
+    public:
+    int a;
+    void show(){
+        "helo";
+    };
+
+};
+class multiple_inheritance_C:public multiple_inheritance_A,public multiple_inheritance_B{
+    public:
+    void display(){
+        cout<<"hello there!"<<endl;
+        multiple_inheritance_A::show();
+    }
+    
+};
+
 int main(){
     default_class A1;
     public_class A2;
@@ -89,6 +130,8 @@ int main(){
     static_class::show();
     method_overloading A5;
     child_class A6;
+    multiple_inheritance_C A7;
+    
   
     
     
