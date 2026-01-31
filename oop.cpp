@@ -61,6 +61,26 @@ class method_overloading{
             cout<<"hello"<<name;
         }
 };
+class Parent_class{
+    public:
+    const int a=10;
+    int b;
+    void display(){
+        cout<<"hello from display";
+    }
+
+
+};
+class child_class: public Parent_class{    // to inheeit a claas use    child class:access_tpye class_nbame
+        int c;                              //excutable code only allowd insied mehtods or construcuto
+                                            // to access data memeber and mehtods use claas_name::member
+        //cout<<a<<;
+        public:
+        child_class(){
+                 cout<<a;
+                 Parent_class::display();
+        }
+};
 int main(){
     default_class A1;
     public_class A2;
@@ -68,7 +88,8 @@ int main(){
     encapsulation_class A4;
     static_class::show();
     method_overloading A5;
-   
+    child_class A6;
+  
     
     
     return 0;
