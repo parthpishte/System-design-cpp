@@ -165,6 +165,11 @@ class Destrcuotr_example{
     }
 }
 ;
+class aggregation{
+    public:
+    public_class a;
+    
+};
 int main()
 {
     default_class A1;
@@ -177,6 +182,8 @@ int main()
     multiple_inheritance_C A7;
     Circle A8;
     derived A9;
+    
+    aggregation A10;
     
     
 

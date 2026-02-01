@@ -1,0 +1,26 @@
+reprsent class, and its relation between other class
+PUBLIC->+
+PROTECTED->#
+PRIVATE->-
+use access modifiers sign in the table as well.
+
+
+
+
+association->pbj association   ->simple,aggregate,compostion(has -a) ->open arrow,line diamod open,line diamod closed
+            ->class association ->inheritance (is-a) ->closed arrow
+
+                        <<abstract>>                 (use if class is abstract)
+                    -------------------------------
+                    |           CLASS NAME        |
+                    |                             |
+                    -------------------------------
+                    |    DATA MEMBER:TYPE          |
+                    |                              |
+                    |                             |
+                    |                             |
+                    -------------------------------
+                    |  METHODS                     |
+                    |                             |
+                    |                             |
+                    ---------------------------------
